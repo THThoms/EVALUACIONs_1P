@@ -1,11 +1,9 @@
-# Universidad [Nombre de la Universidad]  
-## Facultad de [Nombre de la Facultad]  
-### Carrera de [Nombre de la Carrera]  
-
-**Asignatura:** Manejo y Configuración de Software  
-**Nombre del Estudiante:** ___________________________  
-**Fecha:** ___________________  
-
+# Universidad Técnica de Ambato
+## Facultad de Ingeniería en Sistemas, Electrónica e Industrial
+### Carrera de Software
+**Asignatura:** Manejo y Configuración de Software
+**Nombre del Estudiante:** Solis Salinas Mario Tomas
+**Fecha:** 08/04/2026
 ---
 
 # Evaluación Práctica de Git y GitHub
@@ -40,7 +38,21 @@
 
 **📝 Respuesta:**
 
-<!-- Escribe aquí tu respuesta a la Pregunta 1 -->
+**git clone:** Descarga una copia del repositorio remoto a tu computadora local.
+**fork:** Crea una copia del repositorio en tu propia cuenta de GitHub.
+**git pull:** Descarga y fusiona los cambios del repositorio remoto al local.
+
+**¿Cómo se realizó el fork?**
+Se ingresó al repositorio original y se hizo clic en el botón Fork, seleccionando la cuenta THThoms.
+![fork](images/captura1.png)
+
+**¿Cómo se realizó el clone?**
+Se ejecutó el comando git clone con la URL del fork personal.
+![clone](images/captura2.png)
+
+**¿Cómo se verificó que era el fork?**
+Se ejecutó git remote -v y mostró la URL con el usuario THThoms.
+![remote](images/captura3.png)
 
 ---
 
@@ -63,8 +75,25 @@
 
 **📝 Respuesta:**
 
-<!-- Escribe aquí tu explicación y evidencia para la Pregunta 2 -->
+📝 Respuesta:
 
+El archivo .gitignore le indica a Git qué archivos y carpetas NO debe 
+rastrear ni incluir en los commits.
+
+Reglas configuradas:
+- *.log → ignora todos los archivos con extensión .log (ej: error.log)
+- temp/ → ignora la carpeta temp/ y todo su contenido
+- doc/*.md → ignora archivos .md dentro de la carpeta doc/
+- doc/*.txt → ignora archivos .txt dentro de la carpeta doc/
+
+Los archivos prueba.md y prueba.txt creados FUERA de doc/ sí son 
+rastreados por Git. Los mismos archivos DENTRO de doc/ son ignorados.
+
+Evidencia del archivo .gitignore:
+![gitignore](images/captura4.png)
+
+Evidencia de git status mostrando archivos ignorados:
+![status](images/captura5.png)
 ---
 
 ## Pregunta 3 (2 puntos)
@@ -93,7 +122,18 @@
 
 **📝 Respuesta:**
 
-<!-- Escribe aquí tu respuesta completa a la Pregunta 3 -->
+Comandos utilizados:
+1. git flow init → inicializa Git Flow con ramas main y develop
+2. git flow feature start ingresar-encabezado → crea rama feature
+3. git add . / git commit → commits durante el desarrollo
+4. git flow feature finish ingresar-encabezado → merge a develop y elimina la rama
+
+Ventajas de Git Flow:
+- Permite trabajar en nuevas funcionalidades sin afectar main
+- Organiza el trabajo en equipo con ramas definidas
+- Facilita el control de versiones en proyectos largos
+
+![gitflow](images/captura7.png)
 
 ---
 
@@ -123,8 +163,19 @@
 
 **📝 Respuesta:**
 
-<!-- Escribe aquí tu respuesta completa a la Pregunta 4 -->
+**¿Qué es un Pull Request?**
+Es una solicitud para fusionar cambios de una rama hacia otra. 
+Permite revisar el código antes de integrarlo a la rama principal.
 
+**¿Por qué es importante revisarlo?**
+Para verificar que el código no tenga errores y cumpla con 
+los estándares del proyecto antes de fusionarlo.
+
+**¿Qué validaciones se hacen?**
+- Revisión de código
+- Verificación de conflictos
+- Pruebas de funcionamiento
+- Comentarios y sugerencias
 ---
 
 ## Pregunta 5 (2 puntos)
