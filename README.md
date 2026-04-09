@@ -160,7 +160,6 @@ Ventajas de Git Flow:
 
 - Un resumen del procedimiento realizado con las respectivas preguntas y capturas.
 - El número y enlace al pull request.
-
 **📝 Respuesta:**
 
 **¿Qué es un Pull Request?**
@@ -176,6 +175,22 @@ los estándares del proyecto antes de fusionarlo.
 - Verificación de conflictos
 - Pruebas de funcionamiento
 - Comentarios y sugerencias
+
+**Procedimiento práctico:**
+1. Se trabajó en rama develop respondiendo las preguntas teóricas.
+2. Se hizo commit y push a develop.
+3. Se creó un Pull Request desde develop hacia main.
+4. Se agregaron comentarios solicitando respuestas de Preguntas 2 y 3.
+5. Se aprobó y se hizo merge del PR hacia main.
+
+**Enlace al Pull Request:** 
+https://github.com/THThoms/EVALUACIONs_1P/pull/1
+
+![commit en develop](images/captura8.png)
+![PR creado](images/captura9.png)
+![comentario 1](images/captura10.png)
+![comentario 2](images/captura11.png)
+![merge completado](images/captura12.png)
 ---
 
 ## Pregunta 5 (2 puntos)
@@ -205,9 +220,50 @@ los estándares del proyecto antes de fusionarlo.
 - El enlace al pull request.
 - Una breve explicación de qué es un conflicto en Git y por qué ocurrió en este caso.
 
-**📝 Respuesta:**
+📝 Respuesta:
 
-<!-- Escribe aquí tu respuesta completa a la Pregunta 5 -->
+**¿Qué es un conflicto en Git?**
+Un conflicto ocurre cuando dos ramas modifican el mismo archivo 
+de forma diferente y Git no puede fusionarlas automáticamente.
+En este caso ocurrió porque ramaA y ramaB crearon el mismo 
+archivo archivoA.txt con contenido diferente.
+
+**Procedimiento:**
+
+1. Creación de ramas:
+git checkout develop
+git checkout -b ramaA
+git checkout develop
+git checkout -b ramaB
+
+2. Se generó el conflicto al hacer:
+git checkout ramaA
+git merge ramaB
+
+3. Se resolvió editando archivoA.txt combinando ambos contenidos:
+Contenido A
+Contenido B
+
+4. Merge de ramaA hacia develop:
+git checkout develop
+git merge ramaA
+
+5. Se eliminaron las ramas:
+git branch -d ramaA
+git branch -d ramaB
+
+**Enlace al Pull Request:**
+https://github.com/THThoms/EVALUACIONs_1P/pull/2
+
+![ramaA](images/captura14.png)
+![ramaB](images/captura15.png)
+![conflicto](images/captura16.png)
+![resolucion](images/captura17.png)
+![merge develop](images/captura18.png)
+![push develop](images/captura19.png)
+![PR creado](images/captura20.png)
+![merge PR](images/captura21.png)
+![ramas eliminadas](images/captura22.png)
 
 ---
 
@@ -231,6 +287,26 @@ los estándares del proyecto antes de fusionarlo.
   - Sus tres componentes (MAJOR, MINOR, PATCH).
 - Si hace falta agregar alguna evidencia adicional, agregue un tag adicional que sea `Version Final`.
 
-**📝 Respuesta:**
+📝 Respuesta:
 
-<!-- Escribe aquí tu respuesta completa a la Pregunta 6 -->
+**Proceso realizado paso a paso:**
+1. Se trabajó en la rama develop del fork
+2. Se eliminó el archivo archivoA.txt con git rm
+3. Se realizó merge de develop hacia main localmente
+4. Se subieron los cambios de main a develop remoto con todos los tags
+5. Se creará un Pull Request desde develop del fork hacia main del repo original
+
+**Versionamiento Semántico:**
+El versionamiento semántico es un sistema para nombrar versiones 
+de software con el formato: MAJOR.MINOR.PATCH
+
+- MAJOR: cambios grandes que rompen compatibilidad (ej: 2.0.0)
+- MINOR: nuevas funcionalidades compatibles (ej: 1.1.0)
+- PATCH: correcciones de errores pequeños (ej: 1.0.1)
+
+Ejemplo: versión 1.4.2 significa:
+- 1 cambio mayor
+- 4 funcionalidades nuevas
+- 2 correcciones de errores
+
+![limpieza archivos](images/captura23.png)
