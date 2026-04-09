@@ -122,7 +122,18 @@ Evidencia de git status mostrando archivos ignorados:
 
 **📝 Respuesta:**
 
-<!-- Escribe aquí tu respuesta completa a la Pregunta 3 -->
+Comandos utilizados:
+1. git flow init → inicializa Git Flow con ramas main y develop
+2. git flow feature start ingresar-encabezado → crea rama feature
+3. git add . / git commit → commits durante el desarrollo
+4. git flow feature finish ingresar-encabezado → merge a develop y elimina la rama
+
+Ventajas de Git Flow:
+- Permite trabajar en nuevas funcionalidades sin afectar main
+- Organiza el trabajo en equipo con ramas definidas
+- Facilita el control de versiones en proyectos largos
+
+![gitflow](images/captura7.png)
 
 ---
 
@@ -152,8 +163,19 @@ Evidencia de git status mostrando archivos ignorados:
 
 **📝 Respuesta:**
 
-<!-- Escribe aquí tu respuesta completa a la Pregunta 4 -->
+**¿Qué es un Pull Request?**
+Es una solicitud para fusionar cambios de una rama hacia otra. 
+Permite revisar el código antes de integrarlo a la rama principal.
 
+**¿Por qué es importante revisarlo?**
+Para verificar que el código no tenga errores y cumpla con 
+los estándares del proyecto antes de fusionarlo.
+
+**¿Qué validaciones se hacen?**
+- Revisión de código
+- Verificación de conflictos
+- Pruebas de funcionamiento
+- Comentarios y sugerencias
 ---
 
 ## Pregunta 5 (2 puntos)
